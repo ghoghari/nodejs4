@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST"><br>
+        projectid <input type="text" placeholder="Projectid" name="projectid" value="<%=data[0].projectid%>"><br><br>
+        appliedby<input type="text" placeholder="appliedby" name="appliedby" value="<%=data[0].appliedby%>"><br><br>
+        applicationdate<input type="date" placeholder="applicationdate" name="applicationdate" value="<%=data[0].applicationdate.getFullYear() %>-<%=String(data[0].applicationdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].applicationdate.getDate()).padStart(2, '0') %>"><br><br>
+        projectname<input type="text" placeholder="projectname" name="projectname" value="<%=data[0].projectname%>"><br><br>
+        rate<input type="number" placeholder="rate" name="rate" value="<%=data[0].rate%>"><br><br>
+        technology<input type="text" placeholder="technology" name="technology" value="<%=data[0].technology%>"><br><br>
+        platform<select name="platform" placeholder="platform" value="">
+            <option value="<%=data[0].platform%>"><%=data[0].platform%></option>
+
+            <% if (data[0].platform == A) {%>
+                <%=select[0] = 'B'%>
+            <%} else { %>
+              <%=select[0] = 'A'%>
+            <%}%>
+
+            <option value="<%=select[0]%>"><%=select[0]%></option>
+        </select><br><br>
+        link<input type="text" placeholder="link" name="link" value="<%=data[0].link%>"><br><br>
+        location<select name="location" placeholder="location" value="">
+            <option value="<%=data[0].location%>"><%=data[0].location%></option>
+
+            <% if (data[0].location== A) {%>
+                <%=select[0] = 'B'%>
+            <%} else { %>
+              <%=select[0] = 'A'%>
+            <%}%>
+
+            <option value="<%=select[0]%>"><%=select[0]%></option>
+        </select><br><br>
+
+        <button>Save</button>
+    </form>
+</body>
+</html>

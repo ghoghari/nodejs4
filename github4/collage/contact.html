@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <title>DJ's Univercity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" alt=""></a>
+            <div class="navlink">
+                <span class="fa fa-times" onclick="Hidemenu()" id="navlink" ></span>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <span class="fa fa-bars" onclick="Showmenu()"  ></span> 
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+    <!-- -------------------------------contact us-----------------  -->
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.6383829399874!2d72.86579046441034!3d21.206519587063074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f099e4cd2a1%3A0xc14eacab27e00d47!2sAmardham%20Society%2C%20Punagam%2C%20Varachha%2C%20Surat%2C%20Gujarat%20395006!5e0!3m2!1sen!2sin!4v1650951499875!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div  class="contact-col">
+            <div >
+                <span class="fa fa-home"></span>
+                <span>
+                    <h5>xyz Road,ABC Building</h5>
+                    <p>Banglore, karnataka,IN</p>
+                </span>
+            </div>
+            <div>
+                <span class="fa fa-phone"></span>
+                <span>
+                    <h5>+91 7624070353</h5>
+                    <p>MONDAY TO SATURDAY</p>
+                </span>
+            </div>
+            <div>
+                <span class="fa fa-envelope"></span>
+                <span>
+                    <h5>udayvasoya603@gmail.com</h5>
+                    <p>Email us for ur query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="form-heandal.php" method="post">
+                <input type="text" name="name" placeholder="Enter your Name" required>
+                <input type="email" name="email" placeholder="Enter Email Address" required>
+                <input type="text" name="Subject" placeholder="Enter your Subject" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="btn red-btn">Send Message</button>
+
+            </form>
+        </div>
+        </div>
+    </section>
+
+    
+
+    <!-- -----------------------footer---------------- -->
+    <section class="footer">
+        <h4>About us</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates magni totam dolorem. <br> Soluta
+            voluptatum
+            aliquid quam possimus saepe quia fugit.</p>
+        <div class="icon">
+            <span class="fa fa-whatsapp"></span>
+            <span class="fa fa-twitter"></span>
+            <span class="fa fa-instagram"></span>
+            <span class="fa fa-linkedin"></span>
+        </div>
+        <p>Made with <span class="fa fa-heart-o"></span> by easy tutorials</p>
+    </section>
+    <script>
+
+        var navlink = document.getElementById("navlink");
+
+        function Showmenu(){
+            navlink.style.right = "0";
+
+        }
+
+        function Hidemenu(){ 
+            navlink.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

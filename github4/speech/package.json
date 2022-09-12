@@ -1,0 +1,19 @@
+{
+  "name": "speech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "^0.0.1-security",
+    "say": "^0.16.0",
+    "speech-to-text": "^2.9.1",
+    "text-to-mp3": "^1.0.4"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <% for(var i=0; i<data.length; i++) {%>
+
+        starting date <%=data[i].startingdate.getFullYear() %>-<%=String(data[i].startingdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[i].startingdate.getDate()).padStart(2, '0') %>
+        ending date <%=data[i].endingdate.getFullYear() %>-<%=String(data[i].endingdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[i].endingdate.getDate()).padStart(2, '0') %>
+        total days <%=holiday[i]%>
+        leave type <%=data[i].leavesub%>
+        Employee name <%=data[i].firstname%>
+        <img class="" src="data:<%=c[i].contentType%>;base64,<%=c[i].data.toString('base64')%> " height="150px" width="150px">
+        <br> 
+
+    <% } %>
+
+</body>
+</html>

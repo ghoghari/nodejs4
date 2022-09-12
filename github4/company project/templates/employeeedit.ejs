@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+            <!-- <%=data[0].pic%> -->
+            <!-- <p><%=data[0].dateofbirth.getFullYear() %>-<%=String(data[0].dateofbirth.getMonth()+1).padStart(2, '0') %>-<%=data[0].dateofbirth.getDate() %></p> -->
+          <form action="" method="POST" enctype="multipart/form-data"><br>
+            Emp id <input type="text" placeholder="employeeid" name="employeeid" value="<%=data[0].employeeid%>"><br><br>
+            <img class="" src="data:<%=abc.contentType%>;base64,<%=abc.data.toString('base64')%> " height="15px" width="15px"><!-- Here data means abc data -->
+            Add profile picture <input type="file" placeholder="addprofilepicture" name="addprofilepicture" value=""><br><br>
+            First name <input type="text" placeholder="firstname" name="firstname" value="<%=data[0].firstname%>"><br><br>
+            Last name <input type="text" placeholder="lastname" name="lastname" value="<%=data[0].lastname%>"><br><br>
+            Personam email <input type="email" placeholder="personalemail" name="personalemail" value="<%=data[0].personalemail%>"><br><br>
+            Company email <input type="email" placeholder="companyemail" name="companyemail" value="<%=data[0].companyemail%>"><br><br>
+            Mobile <input type="tel" placeholder="mobile" name="mobile" value="<%=data[0].mobile%>"><br><br>
+            Blood group <select name="bloodgroup" placeholder="bloodgroup" value="">
+                <option value="<%=data[0].bloodgroup%>"><%=data[0].bloodgroup%></option>
+
+                <% if (data[0].bloodgroup == A) {%>
+                  <%=select[0] = 'B'%>
+              <%} else { %>
+                <%=select[0] = 'A'%>
+              <%}%>
+
+                <option value="<%=select[0]%>"><%=select[0]%></option>
+            </select><br><br>
+            Date of join <input type="date" placeholder="dateofjoin" name="dateofjoin" value="<%=data[0].dateofjoin.getFullYear() %>-<%=String(data[0].dateofjoin.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].dateofjoin.getDate()).padStart(2, '0') %>"><br><br>
+            Date of birth <input type="date" placeholder="dateofbirth" name="dateofbirth" value="<%=data[0].dateofbirth.getFullYear() %>-<%=String(data[0].dateofbirth.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].dateofbirth.getDate()).padStart(2, '0') %>"><br><br>
+            Relieving date <input type="date" placeholder="relievingdate" name="relievingdate" value="<%=data[0].relievingdate.getFullYear() %>-<%=String(data[0].relievingdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].relievingdate.getDate()).padStart(2, '0') %>"><br><br>
+            anniversary <input type="number" placeholder="anniversary" name="anniversary" value="<%=data[0].anniversary%>"><br><br>
+            Bond duration <input type="text" placeholder="bondduration" name="bondduration" value="<%=data[0].bondduration%>"><br><br>
+            Department <input type="text" placeholder="department" name="department" value="<%=data[0].department%>"><br><br>
+            <button>Sign up</button>
+          </form>
+
+</body>
+</html>

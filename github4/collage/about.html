@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <title>DJ's Univercity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" alt=""></a>
+            <div class="navlink">
+                <span class="fa fa-times" onclick="Hidemenu()" id="navlink" ></span>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <span class="fa fa-bars" onclick="Showmenu()" ></span> 
+        </nav>
+        <h1>About Us</h1>
+    </section>
+    <!-- -------------------------------about us-----------------  -->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are the world's largest univercity</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolore nesciunt cupiditate
+                    explicabo eveniet repudiandae, facere, quidem possimus labore nobis quas sit laboriosam id accusamus
+                    eligendi. Minima porro provident deleniti perferendis obcaecati tempora quibusdam, vel animi quas
+                    amet id? Ab quam nihil molestiae amet totam pariatur a aperiam cumque temporibus adipisci, unde
+                    ipsum obcaecati deserunt earum velit culpa, ex ratione.</p>
+                    <a href="" class="btn red-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="image/about.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------------------footer---------------- -->
+    <section class="footer">
+        <h4>About us</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates magni totam dolorem. <br> Soluta
+            voluptatum
+            aliquid quam possimus saepe quia fugit.</p>
+        <div class="icon">
+            <span class="fa fa-whatsapp"></span>
+            <span class="fa fa-twitter"></span>
+            <span class="fa fa-instagram"></span>
+            <span class="fa fa-linkedin"></span>
+        </div>
+        <p>Made with <span class="fa fa-heart-o"></span> by easy tutorials</p>
+    </section>
+    <script>
+
+        var navlink = document.getElementById("navlink");
+
+        function Showmenu(){
+            navlink.style.right = "0";
+
+        }
+
+        function Hidemenu(){ 
+            navlink.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

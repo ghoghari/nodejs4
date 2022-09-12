@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    pending(<%=data.length%>)
+
+    <br><br><br>
+
+    <% for(var i=0; i<data.length; i++) {%>
+
+    <img class="" src="data:<%=d[i].contentType%>;base64,<%=d[i].data.toString('base64')%> " height="150px" width="150px">
+
+    <%=data[i].firstname%>
+    <a href="holidayapprove/<%=data[i].id%>"><button type="button">approve</button></a>
+    <a href="holidayreject/<%=data[i].id%>"><button type="button">reject</button></a>
+    <br><br>
+
+    <% } %>
+
+</body>
+
+</html>

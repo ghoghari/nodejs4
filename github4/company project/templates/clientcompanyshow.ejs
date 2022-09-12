@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <% for(var i=0; i<data.length; i++) {%>
+
+        <%=data[i].companyname%>
+        <%=data[i].companyid%>
+        <%=data[i].email%>
+        <%=data[i].linkedinid%>
+        <%=data[i].phone%>
+        <%=data[i].website%>
+        <img class="" src="data:<%=b[i].contentType%>;base64,<%=b[i].data.toString('base64')%> " height="15px" width="15px">
+        <br>
+
+        <% } %>
+    
+</body>
+</html>

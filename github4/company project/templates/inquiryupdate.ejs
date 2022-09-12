@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST"><br>
+        inquiryid <input type="text" placeholder="inquiryid" name="inquiryid" value="<%=data[0].inquiryid%>"><br><br>
+        projectname<input type="text" placeholder="Projectname" name="projectname" value="<%=data[0].projectname%>"><br><br>
+        firstname<input type="text" placeholder="firstname" name="firstname" value="<%=data[0].firstname%>"><br><br>
+        lastname<input type="text" placeholder="lastname" name="lastname" value="<%=data[0].lastname%>"><br><br>
+        link<input type="text" placeholder="link" name="link" value="<%=data[0].link%>"><br><br>
+        projecttype<select placeholder="Projecttype" name="Projectyype" value="">
+            <option value="<%=data[0].projectyype%>"><%=data[0].projectyype%></option>
+
+            <% if (data[0].projectyype == A) {%>
+                <%=select[0] = 'B'%>
+            <%} else { %>
+              <%=select[0] = 'A'%>
+            <%}%>
+
+            <option value="<%=select[0]%>"><%=select[0]%></option>
+        </select><br><br>
+        technology<input type="text" placeholder="technology" name="technology" value="<%=data[0].technology%>"><br><br>
+        platform<input type="text" name="platform" placeholder="platform" value="<%=data[0].platform%>"><br><br>
+        applicationdate<input type="date" placeholder="applicationdate" name="applicationdate" value="<%=data[0].applicationdate.getFullYear() %>-<%=String(data[0].applicationdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].applicationdate.getDate()).padStart(2, '0') %>"><br><br>
+        appliedby<input type="text" placeholder="appliedby" name="appliedby" value="<%=data[0].appliedby%>"><br><br>
+        rate<input type="number" placeholder="rate" name="rate" value="<%=data[0].rate%>"><br><br>
+        location<select name="location" placeholder="location" value="">
+            <option value="<%=data[0].location%>"><%=data[0].location%></option>
+
+            <% if (data[0].location == A) {%>
+                <%=select[0] = 'B'%>
+            <%} else { %>
+              <%=select[0] = 'A'%>
+            <%}%>
+
+            <option value="<%=select[0]%>"><%=select[0]%></option>
+        </select><br><br>
+        fRdate<input type="date" placeholder="frdate" name="frdate" value="<%=data[0].frdate.getFullYear() %>-<%=String(data[0].frdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].frdate.getDate()).padStart(2, '0') %>"><br><br>
+        lRdate<input type="date" placeholder="lrdate" name="lrdate" value="<%=data[0].lrdate.getFullYear() %>-<%=String(data[0].lrdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].lrdate.getDate()).padStart(2, '0') %>"><br><br>
+        lfdate<input type="date" placeholder="lfdate" name="lfdate" value="<%=data[0].lfdate.getFullYear() %>-<%=String(data[0].lfdate.getMonth()+1).padStart(2, '0') %>-<%=String(data[0].lfdate.getDate()).padStart(2, '0') %>"><br><br>
+        managedby<input type="text" placeholder="managedby" name="managedby" value="<%=data[0].managedby%>"><br><br>
+        meetingwith<input type="text" placeholder="meetingwith" name="meetingwith" value="<%=data[0].meetingwith%>"><br><br>
+        assignedto<input type="text" placeholder="assignedto" name="assignedto" value="<%=data[0].assignedto%>"><br><br>
+        <button>Save</button>
+</body>
+</html>

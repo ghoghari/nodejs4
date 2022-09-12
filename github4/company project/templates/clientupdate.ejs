@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data"><br>
+        clientid <input type="text" placeholder="clientid" name="clientid" value="<%=data[0].clientid%>"><br><br>
+        skypeid <input type="text" placeholder="skypeid" name="skypeid" value="<%=data[0].skypeid%>"><br><br>
+        firstname<input type="text" placeholder="firstname" name="firstname" value="<%=data[0].firstname%>"><br><br>
+        lastname<input type="text" placeholder="lastname" name="lastname" value="<%=data[0].lastname%>"><br><br>
+        email <input type="email" placeholder="email" name="email" value="<%=data[0].email%>"><br><br>
+        mobile <input type="text" placeholder="mobile" name="mobile" value="<%=data[0].phonenumber%>"><br><br>
+        linkedin<input type="text" placeholder="linkedin" name="linkedin" value="<%=data[0].linkedin%>"><br><br>
+        <img class="" src="data:<%=abc.contentType%>;base64,<%=abc.data.toString('base64')%> " height="15px" width="15px">
+        addprofilepicture <input type="file" placeholder="addprofilepicture" name="addprofilepicture" value=""><br><br>
+        location<select name="location" placeholder="location" value="">
+            <option value="<%=data[0].location%>"><%=data[0].location%></option>
+
+            <% if (data[0].location == A) {%>
+                <%=select[0] = 'B'%>
+            <%} else { %>
+              <%=select[0] = 'A'%>
+            <%}%>
+
+            <option value="<%=select[0]%>"><%=select[0]%></option>
+        </select><br><br>
+        company<select name="company" placeholder="company" value="">
+            <option value="<%=data[0].company%>"><%=data[0].company%></option>
+
+            <% if (data[0].company == A) {%>
+                <%=select[0] = 'B'%>
+            <%} else { %>
+              <%=select[0] = 'A'%>
+            <%}%>
+
+            <option value="<%=select[0]%>"><%=select[0]%></option>
+        </select><br><br>
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
